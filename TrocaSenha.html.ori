@@ -1,0 +1,71 @@
+<html>
+<head>
+    <title>Troca Senha</title>
+    <style>
+        form {
+            text-align: left; /* Alinha o conteúdo do formulário à esquerda */
+        }
+
+        label {
+            display: inline-block;
+            width: 110px; /* Define uma largura para os rótulos */
+            text-align: right; /* Alinha o texto dos rótulos à direita */
+        }
+
+        input {
+            width: 200px; /* Define uma largura para as caixas de texto */
+        }
+
+        input[type="button"] {
+            width: 150px; /* Define a largura padrão para o botão */
+            margin-right: 150px;
+        }
+
+        .center-image {
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<meta charset="UTF-8">
+<body style="background-color: yellow;">
+    <img src="data:image/png;base64,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" alt="Logo do jornal" class="center-image">
+    <h1>O Dia - Troca Senha</h1>
+    
+    <form action="D:\Html\AlterarSenha.php" method="post">
+        <div style="margin-left: 0;"> <!-- Ajuste a margem à esquerda para alinhar com o conteúdo à esquerda -->
+            <label for="user">Usuário:</label>
+            <input type="text" id="user" name="textbox1" placeholder="Digite o seu Usuário"><br><br>
+                                    
+            <label for="NewPass">Nova Senha:</label>
+            <input type="password" id="NewPass" name="textbox3" placeholder="Digite a sua nova senha"><br><br>
+            
+            <label for="RepeatPass">Repita a Senha:</label>
+            <input type="password" id="RepeatPass" name="textbox4" placeholder="Repita a nova senha"><br><br>
+        </div>
+             
+        <input type="submit" value="OK" name="submit_button" style="margin-left: 75px;">
+    </form>
+        
+</body>
+</html>

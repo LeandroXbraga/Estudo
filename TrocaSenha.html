@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html lang="">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>Troca Senha</title>
+    <style>
+        body {
+            background-image: url('https://drive.google.com/uc?export=view&id=1N2nzRGHVMg1Q7zoJrevZC6nfuuuzfWVU');
+            background-size: cover; /* Redimensiona a imagem para cobrir toda a tela */
+            background-position: center; /* Centraliza a imagem na tela */
+            background-attachment: fixed; /* Mantém o fundo fixo enquanto a página é rolada */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        form {
+            text-align: left;
+            margin-top: 20px; /* Adiciona espaço acima do formulário */
+        }
+
+        label {
+            display: inline-block;
+            width: 110px;
+            text-align: right;
+            color: white; /* Define a cor do texto para branco */
+        }
+
+        input {
+            width: 200px;
+            margin-bottom: 10px; /* Adiciona espaço abaixo das caixas de texto */
+        }
+
+        input[type="submit"] {
+            width: 260px;
+            height: 50px;
+            margin-right: 15px;
+        }
+
+        .center-image {
+            display: block;
+            margin: 0 auto;
+            margin-top: 20px; /* Adiciona espaço acima da imagem */
+        }
+    </style>
+  </head>
+  <body>
+    <h1 style="text-align: center; color: white;">Troca Senha</h1>
+    <div style="text-align: center;">  
+      <form action="/AlterarSenha.php" method="post">
+        <div style="margin-left: 0;">
+          <div style="text-align: center;"><label for="user">Usuário:</label><input
+              id="user" name="textbox1" placeholder="Digite o seu Usuário" type="text"></div>
+          <br>
+          <div style="text-align: center;"><label for="CPF">CPF:</label><input id="CPF"
+              name="textbox2" placeholder="Digite o seu CPF" type="text"></div>
+          <br>
+          </div>
+        <div style="text-align: center; margin-top: 20px; margin-left: 80px;"><input
+          value="OK" name="submit_button" type="submit"></div>
+      </form>
+      <!-- Div para exibir mensagens -->
+      <div id="mensagem" style="text-align: center; color: white;"></div>
+    </div>
+  </body>
+</html>
