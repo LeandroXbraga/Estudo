@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<meta charset="utf-8">
 <html lang="">
-  <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+<head>
+    <meta charset="utf-8">
     <title>Troca Senha</title>
     <style>
         body {
-            background-image: url('https://drive.google.com/uc?export=view&id=1N2nzRGHVMg1Q7zoJrevZC6nfuuuzfWVU');
-            background-size: cover; /* Redimensiona a imagem para cobrir toda a tela */
-            background-position: center; /* Centraliza a imagem na tela */
-            background-attachment: fixed; /* Mantém o fundo fixo enquanto a página é rolada */
+          background-image: url('/images/Odia.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -20,19 +20,19 @@
 
         form {
             text-align: left;
-            margin-top: 20px; /* Adiciona espaço acima do formulário */
+            margin-top: 20px;
         }
 
         label {
             display: inline-block;
             width: 110px;
             text-align: right;
-            color: white; /* Define a cor do texto para branco */
+            color: white;
         }
 
         input {
             width: 200px;
-            margin-bottom: 10px; /* Adiciona espaço abaixo das caixas de texto */
+            margin-bottom: 10px;
         }
 
         input[type="submit"] {
@@ -44,27 +44,38 @@
         .center-image {
             display: block;
             margin: 0 auto;
-            margin-top: 20px; /* Adiciona espaço acima da imagem */
+            margin-top: 20px;
         }
     </style>
-  </head>
-  <body>
+</head>
+
+<body>
     <h1 style="text-align: center; color: white;">Troca Senha</h1>
-    <div style="text-align: center;">  
-      <form action="/AlterarSenha.php" method="post">
-        <div style="margin-left: 0;">
-          <div style="text-align: center;"><label for="user">Usuário:</label><input
-              id="user" name="textbox1" placeholder="Digite o seu Usuário" type="text"></div>
-          <br>
-          <div style="text-align: center;"><label for="CPF">CPF:</label><input id="CPF"
-              name="textbox2" placeholder="Digite o seu CPF" type="text"></div>
-          <br>
-          </div>
-        <div style="text-align: center; margin-top: 20px; margin-left: 80px;"><input
-          value="OK" name="submit_button" type="submit"></div>
-      </form>
-      <!-- Div para exibir mensagens -->
-      <div id="mensagem" style="text-align: center; color: white;"></div>
+    <div style="text-align: center;">
+        <form action="/AlterarSenha.php" method="post">
+            <div style="margin-left: 0;">
+                <div style="text-align: center;"><label for="user">Usuário:</label><input
+                        id="user" name="textbox1" placeholder="Digite o seu Usuário" type="text"></div>
+                <br>
+
+                <div style="text-align: center;"><label for="CPF">CPF:</label><input id="CPF" name="textbox2"
+                        placeholder="Digite o seu CPF" type="text" oninput="validateNumberInput(this)"></div>
+
+                <br>
+            </div>
+            <div style="text-align: center; margin-top: 20px; margin-left: 80px;"><input value="OK"
+                    name="submit_button" type="submit"></div>
+        </form>
+        <!-- Div para exibir mensagens -->
+        <div id="mensagem" style="text-align: center; color: white;"></div>
+
+        <script>
+            function validateNumberInput(input) {
+                // Remove caracteres não numéricos
+                input.value = input.value.replace(/\D/g, '');
+            }
+        </script>
     </div>
-  </body>
+</body>
+
 </html>
